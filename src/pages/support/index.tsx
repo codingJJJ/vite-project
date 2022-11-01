@@ -1,11 +1,9 @@
 import { PageContainer } from "@/components";
 import type { FC } from "react";
 import { UserInfomation } from "./components";
-import { RetirementAccount } from "./components/retirement-account";
+import { RetirementAccount } from "./components";
 
 export const Support: FC = () => {
-  console.log(1);
-
   return (
     <PageContainer title="CSR View" className="flex">
       <div className="flex flex-col flex-1">

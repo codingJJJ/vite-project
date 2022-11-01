@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type FC } from "react";
 import { MenuTab } from "./menu-tab";
 import { useLocation } from "react-router-dom";
 import support from "@pub/asserts/icons/support.png";
@@ -29,7 +29,7 @@ const data = [
   },
 ];
 
-export const Menu = () => {
+export const Menu: FC = () => {
   const { pathname } = useLocation();
 
   return (

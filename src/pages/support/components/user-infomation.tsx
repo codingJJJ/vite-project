@@ -6,7 +6,7 @@ import classNames from "classnames";
 import preferred from "@pub/asserts/support/preferred.png";
 import lastContact from "@pub/asserts/support/lastContact.png";
 import customerTime from "@pub/asserts/support/customerTime.png";
-import { InfoTab } from "./info-tab";
+import { InfoTab } from ".";
 import headimg from "@pub/asserts/support/headimg.png";
 
 const tabsData = [

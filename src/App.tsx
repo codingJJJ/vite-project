@@ -1,15 +1,10 @@
-import { useState } from "react";
-import { IconCard } from "./components/icon-card";
-import "./index.less";
-import { Layout } from "@pages/layout";
+import React, { useState } from "react";
+import "./global.less";
+import { BrowserRouter, Router, useRoutes } from "react-router-dom";
+
+import routes from "@/router";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <Layout />
-    </div>
-  );
+  return useRoutes(routes);
 }
 export default App;

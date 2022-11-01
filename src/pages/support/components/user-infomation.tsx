@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type { FC } from "react";
 import { Divider } from "@/components";
 import classNames from "classnames";
@@ -7,11 +7,7 @@ import preferred from "@pub/asserts/support/preferred.png";
 import lastContact from "@pub/asserts/support/lastContact.png";
 import customerTime from "@pub/asserts/support/customerTime.png";
 import { InfoTab } from "./info-tab";
-
-type UserInfomationProps = {
-  headimg: string;
-  online: boolean;
-};
+import headimg from "@pub/asserts/support/headimg.png";
 
 const tabsData = [
   {
@@ -31,10 +27,8 @@ const tabsData = [
   },
 ];
 
-export const UserInfomation: FC<UserInfomationProps> = ({
-  headimg,
-  online,
-}) => {
+export const UserInfomation: FC = () => {
+  const online = useState(false);
   return (
     <div className="h-[237px] w-full mt-10 rounded-xl border-[1px] border-solid border-gray-300 px-5">
       {/* top container */}
@@ -81,7 +75,7 @@ export const UserInfomation: FC<UserInfomationProps> = ({
       {/* bottom container */}
       <div className="flex">
         {tabsData.map((items) => {
-          return <InfoTab className="flex-1" {...items} />;
+          return <InfoTab key={items.title} className="flex-1" {...items} />;
         })}
       </div>
     </div>

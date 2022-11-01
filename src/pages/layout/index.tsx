@@ -8,7 +8,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Header />
       <div style={{ height: "calc(100% - 64px)" }} className="flex">
         <Menu />
-        <Outlet />
+        <div className="w-full h-full min-w-[1400px]">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
